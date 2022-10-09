@@ -12,18 +12,12 @@ const Lesson_2=()=>{
     const renderButtonGroup=()=>{
         return(
             <>
-                <ButtonGroup aria-label="Basic example" size="sm">
-                    <Button variant="primary">Left</Button>
-                    <Button variant="success">Middle</Button>
-                    <Button variant="secondary">Right</Button>
+                <ButtonGroup aria-label="Basic example" size="lg">
+                    <Button className="w"  variant="primary">React</Button>
+                    <Button  className="w" variant="success">Vue</Button>
+                    <Button  className="w" variant="danger">Angular</Button>
                 </ButtonGroup>
 
-                <ButtonGroup vertical>
-                    <Button>Button</Button>
-                    <Button>Button</Button>
-
-
-                </ButtonGroup>
             </>
         )
     }
@@ -349,7 +343,7 @@ const Lesson_2=()=>{
         <div>
             {
 
-            /*    renderButtonGroup()*/
+               renderButtonGroup()
 
             }
 
@@ -364,7 +358,7 @@ const Lesson_2=()=>{
                /* renderCloseButton()*/
             }
             {
-                renderFigure()
+            /* renderFigure() */
             }
         </div>
     )
