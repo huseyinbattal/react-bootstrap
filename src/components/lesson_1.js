@@ -250,12 +250,12 @@ const Lesson_1 = () => {
   return (
     <div>
       {/*  renderAlert()*/}
-      {renderAccordion()}
+      {/* renderAccordion() */}
       {/* renderBagde() */}
 
       {/*renderBreadcrumbs()*/}
       {/*renderButtons()*/}
-      {/* renderToggleButtons() */}
+      {renderToggleButtons()}
     </div>
   );
 };
