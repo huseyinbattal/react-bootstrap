@@ -21,7 +21,7 @@ const Lesson_3 = () => {
   const renderDropdown = () => {
     return (
       <>
-            <Dropdown 
+        <Dropdown
           navbar={true}
           onToggle={(nextShow, meta) => {
             console.log("Nextshow", nextShow);
@@ -38,7 +38,12 @@ const Lesson_3 = () => {
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
-            <Dropdown.Item  as="button" onClick={()=>alert()} eventKey="1" href="#/action-1">
+            <Dropdown.Item
+              as="button"
+              onClick={() => alert()}
+              eventKey="1"
+              href="#/action-1"
+            >
               React.JS
             </Dropdown.Item>
             <Dropdown.Item eventKey="2" href="#/action-2">
@@ -51,7 +56,7 @@ const Lesson_3 = () => {
           </Dropdown.Menu>
         </Dropdown>
         <br />
-        {/* <Dropdown as={ButtonGroup}>
+        <Dropdown as={ButtonGroup}>
           <Button variant="success">Split Button</Button>
 
           <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
@@ -62,7 +67,9 @@ const Lesson_3 = () => {
             <Dropdown.Divider />
             <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
           </Dropdown.Menu>
-        </Dropdown> */}
+        </Dropdown>
+        <br />
+        <br />
         <br />
         <br />
         <br />
@@ -108,24 +115,31 @@ const Lesson_3 = () => {
     return (
       <>
         <ListGroup horizontal={"md"}>
-          <ListGroup.Item active>Cras justo odio</ListGroup.Item>
-          <ListGroup.Item action>Dapibus ac facilisis in</ListGroup.Item>
-          <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-          <ListGroup.Item disabled>Porta ac consectetur ac</ListGroup.Item>
-          <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-          <ListGroup.Item variant="primary">Primary</ListGroup.Item>
-          <ListGroup.Item variant="secondary">Secondary</ListGroup.Item>
+          <ListGroup.Item action variant="primary">
+            Primary
+          </ListGroup.Item>
+          <ListGroup.Item action variant="secondary">
+            Secondary
+          </ListGroup.Item>
           <ListGroup.Item action variant="success">
             Success
           </ListGroup.Item>
-          <ListGroup.Item variant="danger">Danger</ListGroup.Item>
-          <ListGroup.Item variant="warning">Warning</ListGroup.Item>
-          <ListGroup.Item variant="info">Info</ListGroup.Item>
-          <ListGroup.Item variant="light">Light</ListGroup.Item>
-          <ListGroup.Item variant="dark">Dark</ListGroup.Item>
+          <ListGroup.Item action variant="danger">
+            Danger
+          </ListGroup.Item>
+          <ListGroup.Item action variant="warning">
+            Warning
+          </ListGroup.Item>
+          <ListGroup.Item action variant="info">
+            Info
+          </ListGroup.Item>
+          <ListGroup.Item action variant="light">
+            Light
+          </ListGroup.Item>
+          <ListGroup.Item action variant="dark">
+            Dark
+          </ListGroup.Item>
         </ListGroup>
-        <br />
-        <ListGroup.Item>Cras justo odio</ListGroup.Item>
       </>
     );
   };
@@ -137,7 +151,8 @@ const Lesson_3 = () => {
           Launch demo modal
         </Button>
 
-        <Modal
+            <Modal
+                fullscreen={true}
           show={show}
           scrollable={true}
           onEnter={() => {
@@ -164,11 +179,12 @@ const Lesson_3 = () => {
           onShow={() => {
             console.log("onShow");
           }}
-          centered
-          fullscreen={true}
+          
+      
           onHide={handleClose}
           keyboard={false}
-          backdrop="static"
+                backdrop="static"
+            
         >
           <Modal.Header closeButton>
             <Modal.Title>Modal heading</Modal.Title>
@@ -184,14 +200,7 @@ const Lesson_3 = () => {
               </Button>
             </Modal.Footer>
           </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save Changes
-            </Button>
-          </Modal.Footer>
+        
         </Modal>
       </>
     );
@@ -268,10 +277,10 @@ const Lesson_3 = () => {
   };
   return (
     <div>
-      {renderDropdown()}
+      {/* renderDropdown() */}
       {/* renderImage() */}
       {/* renderListGroup() */}
-      {/* renderModal() */}
+      {renderModal()}
       {/* renderNav() */}
     </div>
   );
