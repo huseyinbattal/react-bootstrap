@@ -113,38 +113,35 @@ const Lesson_2 = () => {
             <Card.Text>Last updated 3 mins ago</Card.Text>
           </Card.ImgOverlay>
         </Card>
-            <div className="row align-items-center g-4 mt-2">
-            {[
-          "Primary",
-          "Secondary",
-          "Success",
-          "Danger",
-          "Warning",
-          "Info",
-          "Light",
-          "Dark",
-        ].map((variant) => (
-            
+        <div className="row align-items-center g-4 mt-2">
+          {[
+            "Primary",
+            "Secondary",
+            "Success",
+            "Danger",
+            "Warning",
+            "Info",
+            "Light",
+            "Dark",
+          ].map((variant) => (
             <Card
-                
-            bg={variant.toLowerCase()}
-            key={variant}
-            text={variant.toLowerCase() === "light" ? "dark" : "white"}
-            style={{ width: "18rem" }}
-            className="m-1 card-one"
-          >
-            <Card.Header>Header</Card.Header>
-            <Card.Body>
-              <Card.Title>{variant} Card Title </Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-       
-        ))}
-       </div>
+              bg={variant.toLowerCase()}
+              key={variant}
+              text={variant.toLowerCase() === "light" ? "dark" : "white"}
+              style={{ width: "18rem" }}
+              className="m-1 card-one"
+            >
+              <Card.Header>Header</Card.Header>
+              <Card.Body>
+                <Card.Title>{variant} Card Title </Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          ))}
+        </div>
         <CardGroup>
           <Card>
             <Card.Img variant="top" src="holder.js/100px160" />
@@ -294,18 +291,22 @@ const Lesson_2 = () => {
       <>
         <Carousel
           activeIndex={index}
+
           onSlid={(ekey, direction) => {
-            console.log("end", ekey, direction);
-          }}
-          onSlide={(ekey, direction) => {
             console.log(ekey, direction);
           }}
+
+          /*
+          onSlide={(ekey, direction) => {
+            console.log(ekey, direction);
+        }}
+        */
+
           onSelect={handleSelect}
-          fade
           interval={1000}
-          variant="dark"
-          controls={false}
-          indicators={false}
+          controls={true}
+          indicators={true}
+          fade
         >
           <Carousel.Item>
             <img
@@ -313,10 +314,6 @@ const Lesson_2 = () => {
               src="https://images.unsplash.com/photo-1653792892136-69825f302a78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
               alt="First slide"
             />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img
@@ -324,11 +321,6 @@ const Lesson_2 = () => {
               src="https://images.unsplash.com/photo-1653749576888-e1c35779b469?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
               alt="Second slide"
             />
-
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img
@@ -336,13 +328,6 @@ const Lesson_2 = () => {
               src="https://images.unsplash.com/photo-1653763185252-a18940e64517?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
               alt="Third slide"
             />
-
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
       </>
@@ -375,9 +360,9 @@ const Lesson_2 = () => {
     <div>
       {/* renderButtonGroup() */}
 
-      {renderCard()}
+      {/* renderCard()*/}
 
-      {/*  renderCarousel()*/}
+      {renderCarousel()}
       {/* renderCloseButton()*/}
       {/* renderFigure() */}
     </div>
