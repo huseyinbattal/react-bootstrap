@@ -336,8 +336,8 @@ const Lesson_2 = () => {
   const renderCloseButton = () => {
     return (
       <div className="bg-dark p-3">
-        <CloseButton variant="white" />
-        <CloseButton variant="white" disabled />
+        <CloseButton onClick={()=>alert("Merhaba")} variant="white" />
+       
       </div>
     );
   };
@@ -345,13 +345,13 @@ const Lesson_2 = () => {
     return (
       <Figure>
         <Figure.Image
-          width={171}
-          height={180}
+          width={200}
+          height={200}
           alt="171x180"
           src="https://images.unsplash.com/photo-1653763185252-a18940e64517?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
         />
         <Figure.Caption>
-          Nulla vitae elit libero, a pharetra augue mollis interdum.
+          Nulla vitae elit libero, a pharetra augue mollis interdum. Nulla vitae elit libero, a pharetra augue mollis interdum. Nulla vitae elit libero, a pharetra augue mollis interdum.
         </Figure.Caption>
       </Figure>
     );
@@ -362,9 +362,9 @@ const Lesson_2 = () => {
 
       {/* renderCard()*/}
 
-      {renderCarousel()}
-      {/* renderCloseButton()*/}
-      {/* renderFigure() */}
+      {/* renderCarousel() */}
+      {/*renderCloseButton() */ }
+      {renderFigure()}
     </div>
   );
 };
