@@ -39,8 +39,8 @@ const Lesson_5 = () => {
   const renderProgress = () => {
     return (
       <>
-        <ProgressBar now={60} label={`${60}%`} />
-        <ProgressBar variant="success" now={40} />
+        <ProgressBar now={70} label={`${70}%`} />
+        {/* <ProgressBar variant="success" now={40} />
         <ProgressBar variant="info" now={20} />
         <ProgressBar variant="warning" now={60} />
         <ProgressBar variant="primary" now={60} />
@@ -48,12 +48,12 @@ const Lesson_5 = () => {
         <ProgressBar striped variant="success" now={40} />
         <ProgressBar striped variant="info" now={20} />
         <ProgressBar striped variant="warning" now={60} />
-        <ProgressBar striped variant="danger" now={80} animated />
-        <ProgressBar>
+        <ProgressBar striped variant="danger" now={80} animated /> */}
+        {/* <ProgressBar>
           <ProgressBar striped variant="success" max={70} now={90} key={1} />
           <ProgressBar variant="warning" now={20} min={10} key={2} />
           <ProgressBar striped variant="danger" now={10} key={3} />
-        </ProgressBar>
+        </ProgressBar> */}
       </>
     );
   };
