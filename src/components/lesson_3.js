@@ -151,8 +151,7 @@ const Lesson_3 = () => {
           Launch demo modal
         </Button>
 
-            <Modal
-                fullscreen={true}
+        <Modal
           show={show}
           scrollable={true}
           onEnter={() => {
@@ -179,12 +178,9 @@ const Lesson_3 = () => {
           onShow={() => {
             console.log("onShow");
           }}
-          
-      
           onHide={handleClose}
           keyboard={false}
-                backdrop="static"
-            
+          backdrop="static"
         >
           <Modal.Header closeButton>
             <Modal.Title>Modal heading</Modal.Title>
@@ -200,7 +196,6 @@ const Lesson_3 = () => {
               </Button>
             </Modal.Footer>
           </Modal.Body>
-        
         </Modal>
       </>
     );
@@ -209,7 +204,7 @@ const Lesson_3 = () => {
   const renderNav = () => {
     return (
       <>
-        <Nav
+        {/* <Nav
           fill
           variant="tabs"
           activeKey={selectedKey}
@@ -218,12 +213,12 @@ const Lesson_3 = () => {
           }}
         >
           <Nav.Item>
-            <Nav.Link eventKey="/home" href="/home">
+            <Nav.Link  eventKey="/home" href="/home">
               Active
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="link-1">Link</Nav.Link>
+            <Nav.Link variant="pills" eventKey="link-1">Link</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link eventKey="link-2">Link</Nav.Link>
@@ -233,33 +228,35 @@ const Lesson_3 = () => {
               Disabled
             </Nav.Link>
           </Nav.Item>
-        </Nav>
+        </Nav> */}
         <br /> <br />
         <Nav
-          variant="tabs"
-          activeKey="1"
-          onSelect={(key) => {
-            alert(key);
-          }}
+          justify
+          defaultActiveKey="home"
+          variant="pills"
+
+          // onSelect={(key) => {
+          //   alert(key);
+          // }}
         >
           <Nav.Item>
-            <Nav.Link eventKey="1" href="#/home">
-              NavLink 1 content
+            <Nav.Link eventKey="1">
+              1
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link eventKey="2" title="Item">
-              NavLink 2 content
+              2
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey="3" disabled>
-              NavLink 3 content
-            </Nav.Link>
+            <Nav.Link eventKey="3">3</Nav.Link>
           </Nav.Item>
           <NavDropdown
-            menuVariant="dark"
-            variant="success"
+            onSelect={(key) => {
+              alert(key)
+            }}
+            
             title="Dropdown"
             id="nav-dropdown"
           >
@@ -280,8 +277,8 @@ const Lesson_3 = () => {
       {/* renderDropdown() */}
       {/* renderImage() */}
       {/* renderListGroup() */}
-      {renderModal()}
-      {/* renderNav() */}
+      {/* renderModal() */}
+      {renderNav()}
     </div>
   );
 };
