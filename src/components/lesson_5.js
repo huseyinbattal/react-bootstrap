@@ -47,28 +47,6 @@ const Lesson_5 = () => {
   const renderSpinner = () => {
     return (
       <>
-        <Spinner animation="border" />
-        <Spinner animation="grow" />
-        <Spinner animation="border" variant="primary" />
-        <Spinner animation="border" variant="secondary" />
-        <Spinner animation="border" variant="success" />
-        <Spinner animation="border" variant="danger" />
-        <Spinner animation="border" variant="warning" />
-        <Spinner animation="border" variant="info" />
-        <Spinner animation="border" variant="light" />
-        <Spinner animation="border" variant="dark" />
-        <Spinner animation="grow" variant="primary" />
-        <Spinner animation="grow" variant="secondary" />
-        <Spinner animation="grow" variant="success" />
-        <Spinner animation="grow" variant="danger" />
-        <Spinner animation="grow" variant="warning" />
-        <Spinner animation="grow" variant="info" />
-        <Spinner animation="grow" variant="light" />
-        <Spinner animation="grow" variant="dark" />
-        <Spinner animation="border" size="sm" />
-        <Spinner animation="border" />
-        <Spinner animation="grow" size="sm" />
-        <Spinner animation="grow" />
         <Button variant="primary" disabled>
           <Spinner
             as="span"
@@ -97,7 +75,7 @@ const Lesson_5 = () => {
   const renderTable = () => {
     return (
       <>
-        <Table striped bordered hover size="sm" responsive>
+        <Table striped bordered hover size="sm" responsive variant="dark">
           <thead>
             <tr>
               <th>#</th>
@@ -163,28 +141,28 @@ const Lesson_5 = () => {
   const renderTabs = () => {
     return (
       <>
-        <Tabs
+        {/* <Tabs
           variant="tabs"
           activeKey={key}
-          transition={false}
+          transition={true}
           onSelect={(k) => setKey(k)}
           id="uncontrolled-tab-example"
           className="mb-3"
         >
           <Tab eventKey="home" title="Home">
-            tab 1
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima necessitatibus sapiente distinctio eius id tempora voluptatibus iure tempore illo dignissimos corporis consectetur aliquid, voluptate, omnis rerum eaque laboriosam cupiditate? Doloremque?
           </Tab>
           <Tab eventKey="profile" title="Profile">
-            tab2
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi placeat iusto, harum iure ullam veniam ipsam. Minima nostrum id sint exercitationem, quos error provident est qui cumque nesciunt quia odit.
           </Tab>
-          <Tab eventKey="contact" title="Contact" disabled>
-            tab3
+          <Tab eventKey="contact" title="Contact">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, sint. Officia repellat ullam repellendus corporis nobis qui quaerat odio, reprehenderit sunt consequuntur tempore, maxime impedit, ex tenetur itaque nihil alias?
           </Tab>
-        </Tabs>
+        </Tabs> */}
 
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <Row>
-            <Col sm={3}>
+            <Col sm={2}>
               <Nav variant="pills" className="flex-column">
                 <Nav.Item>
                   <Nav.Link eventKey="first">Tab 1</Nav.Link>
@@ -194,38 +172,12 @@ const Lesson_5 = () => {
                 </Nav.Item>
               </Nav>
             </Col>
-            <Col sm={9}>
+            <Col sm={10}>
               <Tab.Content>
-                <Tab.Pane
-                  onEnter={() => {
-                    console.log("onEnter");
-                  }}
-                  onEntered={() => {
-                    console.log("onEntered");
-                  }}
-                  onEntering={() => {
-                    console.log("onEnterinmg");
-                  }}
-                  onExit={() => {
-                    console.log("onExit");
-                  }}
-                  onEscapeKeyDown={() => {
-                    console.log("onescape");
-                  }}
-                  onExited={() => {
-                    console.log("onExited");
-                  }}
-                  onExiting={() => {
-                    console.log("onExiting");
-                  }}
-                  onShow={() => {
-                    console.log("onShow");
-                  }}
-                  eventKey="first"
-                >
-                  1
+                <Tab.Pane eventKey="first">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores enim aspernatur libero officia facere repellendus sint optio fugiat ad doloremque debitis perspiciatis, sequi sunt error, molestias consectetur. Facere, quo ratione!
                 </Tab.Pane>
-                <Tab.Pane eventKey="second">2</Tab.Pane>
+                <Tab.Pane eventKey="second">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor assumenda pariatur delectus, vero aperiam veritatis quasi ipsum dolore? Commodi quae quis adipisci fugiat, accusantium optio laudantium nostrum assumenda dolorem totam.</Tab.Pane>
               </Tab.Content>
             </Col>
           </Row>
@@ -331,10 +283,10 @@ const Lesson_5 = () => {
   return (
     <div>
       {/* {renderPopover()} */}
-      {renderProgress()}
-      {/*renderSpinner()*/}
-      {/*renderTable()*/}
-      {/*renderTabs()*/}
+      {/* {renderProgress()} */}
+      {/* {renderSpinner()} */}
+      {/* {renderTable()} */}
+      {renderTabs()}
       {/*renderTooltip()*/}
       {/*{renderToast()} */}
     </div>
