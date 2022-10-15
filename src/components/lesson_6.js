@@ -5,7 +5,8 @@ import {
   Row,
   Stack,
   Form,
-  Input,
+    Input,
+  Image
 } from "react-bootstrap";
 import { useState } from "react";
 const Lesson_6 = () => {
@@ -21,7 +22,7 @@ const [place,setPlace]=useState(false)
   const renderGrid = () => {
     return (
       <>
-        <Button
+        {/* <Button
           size="sm"
           className="w-25"
           onClick={(e) => {
@@ -87,7 +88,15 @@ const [place,setPlace]=useState(false)
         </Col>
       </Form.Group>
           </Form>
-        </fieldset>
+        </fieldset> */}
+      <Form.Group controlId="formFileLg" className="mb-3">
+        <Form.Label>Large file input example</Form.Label>
+                <Form.Control value={state} onChange={(e) => setState(e.target.value)} type="file" size="lg" />
+                
+            </Form.Group>
+            <Image src={state} alt="biyometrik" />
+            <br/>
+            {state}
       </>
     );
   };
