@@ -9,7 +9,7 @@ import LoadingButton from "./components/LoadingButton";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       {/* <LoadingButton/> */}
       {/* <Lesson_1 /> */}
       {/* <Lesson_2 /> */}

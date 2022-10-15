@@ -1,15 +1,58 @@
+import { Button, Col, Container, Row, Stack, Form } from "react-bootstrap";
 import { useState } from "react";
-import { Badge, Button, Col, Container, Row, Stack } from "react-bootstrap";
-
 const Lesson_6 = () => {
+  const [state, setState] = useState("");
+  const [lock, setLock] = useState(false);
+    const [text] = useState("Lock");
+    const [text1]=useState("Unclock")
+
   const renderGrid = () => {
     return (
       <>
-       <Stack gap={2}>
-      <div className="rounded bg-success text-white border border-warning">First item</div>
-      <div className="rounded bg-success text-white border border-warning">Second item</div>
-      <div className="rounded bg-success text-white border border-warning">Third item</div>
-    </Stack>
+        {state}
+        <Button size="sm" className="w-25"
+                onClick={(e) => {
+                    setLock(!lock)
+                   
+          }}
+          variant={!lock ? "outline-success" : "outline-danger"}
+        >
+          {!lock?text:text1}
+        </Button>
+        <fieldset disabled={lock}>
+          <Form validated
+            onSubmit={(e) => {
+              e.preventDefault();
+              console.log(e);
+            }}
+          >
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control
+                value={state}
+                onChange={(e) => {
+                  setState(e.target.value);
+                }}
+                type="email"
+                placeholder="Enter email"
+              />
+              <Form.Text className="text-muted">
+                We'll never share your email with anyone else.
+              </Form.Text>
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" placeholder="Password" />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Check me out" />
+            </Form.Group>
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
+        </fieldset>
       </>
     );
   };
