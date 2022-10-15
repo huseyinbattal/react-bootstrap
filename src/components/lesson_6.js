@@ -1,18 +1,28 @@
 import { useState } from "react";
-import { Button, Col, Container, Row, Stack } from "react-bootstrap";
+import { Badge, Button, Col, Container, Row, Stack } from "react-bootstrap";
 
 const Lesson_6 = () => {
-    const [show,setShow]=useState(true)
-    const renderGrid = () => {
-
+  const renderGrid = () => {
     return (
       <>
-       {show? <div class="alert alert-success alert-dismissible">
-                <button onClick={() => {
-                    setShow(false)
-          }} class="btn-close" data-bs-dismiss="alert"></button>
-          Blah blah blah.
-        </div>:<Button variant="outline-success" onClick={()=>setShow(true)}>geri getir</Button>}
+        <Badge bg="warning" className="rounded-circle">
+          1
+        </Badge>{" "}
+        <Badge bg="success" className="rounded-circle">
+          2
+        </Badge>{" "}
+        <Badge bg="danger" className="rounded-circle">
+          3
+        </Badge>{" "}
+        <Badge bg="secondary" className="rounded-circle">
+          4
+        </Badge>{" "}
+        <Badge bg="dark" className="rounded-circle">
+          5
+        </Badge>{" "}
+        <Badge bg="primary" className="rounded-circle">
+          6
+        </Badge>
       </>
     );
   };
