@@ -21,7 +21,7 @@ const [place,setPlace]=useState(false)
 
   const renderGrid = () => {
     return (
-      <>
+      <Form>
         {/* <Button
           size="sm"
           className="w-25"
@@ -91,13 +91,16 @@ const [place,setPlace]=useState(false)
         </fieldset> */}
       <Form.Group controlId="formFileLg" className="mb-3">
         <Form.Label>Large file input example</Form.Label>
-                <Form.Control value={state} onChange={(e) => setState(e.target.value)} type="file" size="lg" />
-                
+                <Form.Control value={state} onChange={(e) => {
+                    setState(e.target.value);
+                    console.log(e)
+                }} type="file" size="lg" />
             </Form.Group>
-            <Image src={state} alt="biyometrik" />
+            <Form.Control type="submit"/>
+            <Image src={state} />
             <br/>
             {state}
-      </>
+      </Form>
     );
   };
 
