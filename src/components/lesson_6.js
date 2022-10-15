@@ -5,10 +5,10 @@ const Lesson_6 = () => {
   const renderGrid = () => {
     return (
       <>
-       <Stack gap={3}>
-      <div className="bg-light border">First item</div>
-      <div className="bg-light border">Second item</div>
-      <div className="bg-light border">Third item</div>
+       <Stack gap={2}>
+      <div className="rounded bg-success text-white border border-warning">First item</div>
+      <div className="rounded bg-success text-white border border-warning">Second item</div>
+      <div className="rounded bg-success text-white border border-warning">Third item</div>
     </Stack>
       </>
     );
