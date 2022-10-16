@@ -1,4 +1,7 @@
 import {
+  FormCheck,
+  Feedback,
+  feedbackToolTip,
   Badge,
   Alert,
   Button,
@@ -12,26 +15,185 @@ import {
 import { useState } from "react";
 
 const Lesson_7 = () => {
-  const [validated, setValidated] = useState(false);
-  const [state, setState] = useState("");
-  const [color, setColor] = useState("#563d7c");
-  const [text, setText] = useState("");
-
-  const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    debugger;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-
-    setValidated(true);
-  };
+  const [styleRed] = useState({
+    color: "red",
+    opacity: "0.4",
+  });
+  const [styleGreen] = useState({ color: "green" });
+  const [show1, setShow1] = useState(false);
+  const [show2, setShow2] = useState(false);
+  const [show3, setShow3] = useState(false);
+  const [show4, setShow4] = useState(false);
+  const [range, setRange] = useState(10);
+  const [active, setActive] = useState(true);
 
   const renderForm = () => {
     return (
       <>
-        <Form.Select
+        
+        <Form>
+      <Row className="mb-3">
+        <Form.Group as={Col} controlId="formGridEmail">
+          <Form.Label>Email</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+      </Row>
+
+      <Form.Group className="mb-3" controlId="formGridAddress1">
+        <Form.Label>Address</Form.Label>
+        <Form.Control placeholder="1234 Main St" />
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formGridAddress2">
+        <Form.Label>Address 2</Form.Label>
+        <Form.Control placeholder="Apartment, studio, or floor" />
+      </Form.Group>
+
+      <Row className="mb-3">
+        <Form.Group as={Col} controlId="formGridCity">
+          <Form.Label>City</Form.Label>
+          <Form.Control />
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridState">
+          <Form.Label>State</Form.Label>
+          <Form.Select defaultValue="...">
+            <option>Choose...</option>
+            <option>...</option>
+          </Form.Select>
+        </Form.Group>
+
+        <Form.Group as={Col} controlId="formGridZip">
+          <Form.Label>Zip</Form.Label>
+          <Form.Control />
+        </Form.Group>
+      </Row>
+
+      <Form.Group className="mb-3" id="formGridCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+      </Form.Group>
+
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
+
+
+        {/* <FloatingLabel controlId="floatingSelect" label="Lütfen bir il seçiniz">
+          <Form.Select aria-label="Floating label select example">
+            <option>...</option>
+            <option value="1">İzmir</option>
+            <option value="2">Ankara</option>
+            <option value="3">İstanbul</option>
+          </Form.Select>
+        </FloatingLabel> */}
+
+        {/* <FloatingLabel controlId="floatingTextarea2" label="Comments">
+          <Form.Control
+            as="textarea"
+            placeholder="Leave a comment here"
+            style={{ height: "100px" }}
+          />
+        </FloatingLabel> */}
+
+        {/* <InputGroup size="sm" className="mb-3">
+          <InputGroup.Text id="inputGroup-sizing-sm">Small</InputGroup.Text>
+          <Form.Control
+            isValid
+            aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </InputGroup>
+        <br />
+        <InputGroup className="mb-3">
+          <InputGroup.Text id="inputGroup-sizing-default">
+            Default
+          </InputGroup.Text>
+          <Form.Control
+            aria-label="Default"
+            aria-describedby="inputGroup-sizing-default"
+          />
+        </InputGroup>
+        <br />
+        <InputGroup size="lg">
+          <InputGroup.Text id="inputGroup-sizing-lg">Large</InputGroup.Text>
+          <Form.Control
+            aria-label="Large"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </InputGroup> */}
+
+        {/* {JSON.stringify(active)}
+        <br/>
+         <Form.Label>{range}</Form.Label>
+        <Form.Range disabled={active ? true : false} onChange={(e) => setRange(e.target.value)} value={range} />
+        <Button onClick={()=>setActive(!active)}>Active</Button> */}
+
+        {/* <Form>
+          <Form.Check
+            style={!show1 ? styleRed : styleGreen}
+            onClick={() => setShow1(!show1)}
+            type="switch"
+            id="html"
+            label="HTML"
+          />
+          <Form.Check
+            style={!show2 ? styleRed : styleGreen}
+            onClick={() => setShow2(!show2)}
+            type="switch"
+            label="CSS"
+            id="css"
+          />
+          <Form.Check
+            style={!show3 ? styleRed : styleGreen}
+            onClick={() => setShow3(!show3)}
+            type="switch"
+            label="JAVASCRIPT"
+            id="js"
+          />
+          <Form.Check
+            style={!show4 ? styleRed : styleGreen}
+            onClick={(e) => {
+              if (e.target.id === "react") {
+                setShow4(!show4);
+              }
+            }}
+            type="switch"
+            label="REACT.JS"
+            id="react"
+          />
+        </Form> */}
+
+        {/* <Form>
+        <Form.Check
+            type="radio"
+            label="İstanbul"
+            id="radio1"
+            name="radio"
+            disabled
+          />
+          <Form.Check
+            type="radio"
+            label="Ankara"
+            id="radio2"
+            name="radio"
+           
+          />
+          <Form.Check
+            type="radio"
+            label="İzmir"
+            id="radio3"
+            name="radio"
+
+          />
+    </Form> */}
+
+        {/* <Form.Select
           onChange={(e) => {
             setText(e.target.value)
           }}
@@ -43,9 +205,7 @@ const Lesson_7 = () => {
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
-        </Form.Select>
-
-        <div>{ text}</div>
+        </Form.Select> */}
 
         {/* <Form.Label htmlFor="inputPassword5">Password</Form.Label>
         <Form.Control
@@ -186,7 +346,7 @@ const Lesson_7 = () => {
 
         <Form>
           <Form.Check
-            inline
+            
             isInvalid
             type="switch"
             id="custom-switch"

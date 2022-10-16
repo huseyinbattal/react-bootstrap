@@ -6,6 +6,7 @@ import Lesson_5 from "./components/lesson_5";
 import Lesson_6 from "./components/lesson_6";
 import Lesson_7 from "./components/lesson_7";
 import LoadingButton from "./components/LoadingButton";
+import FormValidation from "./components/FormValidation";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       {/* { <Lesson_4 />} */}
       {/* {<Lesson_5 />} */}
       {/* {<Lesson_6 />} */}
-      {<Lesson_7 />}
+      {/* {<Lesson_7 />} */}
+      <FormValidation/>
     </div>
   );
 }
