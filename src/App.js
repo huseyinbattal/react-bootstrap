@@ -9,15 +9,15 @@ import LoadingButton from "./components/LoadingButton";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       {/* <LoadingButton/> */}
       {/* <Lesson_1 /> */}
       {/* <Lesson_2 /> */}
       {/* <Lesson_3 /> */}
       {/* { <Lesson_4 />} */}
       {/* {<Lesson_5 />} */}
-      {<Lesson_6 />}
-      {/* <Lesson_7 /> */}
+      {/* {<Lesson_6 />} */}
+      {<Lesson_7 />}
     </div>
   );
 }
