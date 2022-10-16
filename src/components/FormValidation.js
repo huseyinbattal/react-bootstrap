@@ -16,7 +16,6 @@ function FormValidation() {
     }
 
       setValidated(true);
-      console.log(e)
   };
 
   return (
